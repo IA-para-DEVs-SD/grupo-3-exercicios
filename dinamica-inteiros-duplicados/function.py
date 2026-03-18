@@ -5,9 +5,11 @@ def duplicados(num):
     num.sort()
     dict = set(num)
 
-    print("Há duplicados") if len(dict) != len(num) else print("Não há duplicados")
-
-    for i in dict:
-        print(f"{i}   -  {num.count(i)}")
+    if len(dict) != len(num):
+        for i in dict:
+            print(f"{i}   -  {num.count(i)}")
+    else: 
+        print("Não há duplicados")
+        return
         
 duplicados(numeros)
